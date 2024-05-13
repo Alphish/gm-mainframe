@@ -1,3 +1,17 @@
+// --------
+// Instance
+// --------
+
+/// @func mainframe_get()
+/// @desc Retrieves the mainframe instance, or throws an error if none is found.
+/// @returns {Id.Instance<sys_Mainframe>}
+function mainframe_get() {
+    if (!instance_exists(sys_Mainframe))
+        throw MainframeException.instance_not_found();
+    
+    return sys_Mainframe.id;
+}
+
 // ---------
 // Callbacks
 // ---------
@@ -35,4 +49,31 @@ function mainframe_callback_method_call(_caller, _name) {
             _method(_steps, _time);
         }
     });
+}
+
+// ------
+// Events
+// ------
+
+/// @func mainframe_get_event(event)
+/// @desc Retrieves a mainframe event to manage actions of.
+/// @arg {Struct.MainframeEvent,String} event       The name of the event, or the event itself.
+/// @returns {Struct.MainframeEvent}
+function mainframe_get_event(_event) {
+    if (is_instanceof(_event, MainframeEvent))
+        return _event;
+    
+    if (is_string(_event)) {
+        var _key = string_lower(_event);
+        var _named_event = mainframe_get().events[$ _key];
+        if (!is_instanceof(_named_event, MainframeEvent))
+            throw MainframeException.event_not_found($"Could not find a mainframe event by name '{_event}'.");
+        
+        return _named_event;
+    }
+    
+    if (is_struct(_event))
+        throw MainframeException.event_not_found($"Cannot resolve a mainframe event using a {instanceof(_event)} structure.");
+    else
+        throw MainframeException.event_not_found($"Cannot resolve a mainframe event using a {typeof(_event)} value.");
 }

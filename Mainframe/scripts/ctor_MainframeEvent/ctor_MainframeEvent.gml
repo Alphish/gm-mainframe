@@ -10,6 +10,14 @@ function MainframeEvent(_name) constructor {
     /// @ignore
     actions = [];
     
+    // registering the event in the mainframe instance
+    var _key = string_lower(_name);
+    var _events = mainframe_get().events;
+    if (struct_exists(_events, _key))
+        throw MainframeException.event_duplicate(self);
+    else
+        _events[$ _key] = self;
+    
     // --------------
     // Adding actions
     // --------------
