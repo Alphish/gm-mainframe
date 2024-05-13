@@ -9,7 +9,11 @@
     "name":"Default",
   },
   "defaultScriptType":1,
-  "Folders":[],
+  "Folders":[
+    {"$GMFolder":"","%Name":"_Packages","folderPath":"folders/_Packages.yy","name":"_Packages","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Alphish","folderPath":"folders/_Packages/Alphish.yy","name":"Alphish","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Mainframe","folderPath":"folders/_Packages/Alphish/Mainframe.yy","name":"Mainframe","resourceType":"GMFolder","resourceVersion":"2.0",},
+  ],
   "IncludedFiles":[],
   "isEcma":false,
   "LibraryEmitters":[],
@@ -19,6 +23,9 @@
   "name":"Mainframe",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ctor_MainframeEvent","path":"scripts/ctor_MainframeEvent/ctor_MainframeEvent.yy",},},
+    {"id":{"name":"ctor_MainframeEventAction","path":"scripts/ctor_MainframeEventAction/ctor_MainframeEventAction.yy",},},
+    {"id":{"name":"funcs_Mainframe","path":"scripts/funcs_Mainframe/funcs_Mainframe.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

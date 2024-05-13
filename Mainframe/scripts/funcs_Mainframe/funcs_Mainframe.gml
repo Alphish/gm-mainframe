@@ -1,0 +1,38 @@
+// ---------
+// Callbacks
+// ---------
+
+/// @func mainframe_callback_user_event(object,number)
+/// @desc Creates a callback that executes a user event for the given object or instance.
+/// @arg {Asset.GMObject,Id.Instance} object        The object or instance to execute the user event of.
+/// @arg {Real} number                              The number of the user event.
+/// @returns {Function}
+function mainframe_callback_user_event(_object, _number) {
+    return method({ object: _object, number: _number }, function() {
+        var _object = object;
+        var _number = number;
+        with (_object) {
+            event_user(_number);
+        }
+    });
+}
+
+/// @func mainframe_callback_method_call(caller,name)
+/// @desc Creates a callback that calls a method of the given object, instance or struct.
+/// @arg {Any} caller       The object, instance or struct to execute the method of.
+/// @arg {String} name      The name of the method.
+/// @returns {Function}
+function mainframe_callback_method_call(_caller, _name) {
+    // the method might be used by an event action or a background process action, depending on a specific method
+    // so "steps" and "time" argument are passed to the resulting callback
+    // for event actions, these arguments will be skipped during the call
+    // and they should be skipped by the referenced method as well
+    return method({ caller: _caller, method_name: _name }, function(_steps, _time) {
+        var _caller = caller;
+        var _name = method_name;
+        with (_caller) {
+            var _method = self[$ _name];
+            _method(_steps, _time);
+        }
+    });
+}
