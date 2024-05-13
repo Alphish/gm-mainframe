@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"ctor_MainframeBackgroundProcess",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_MainframeBackgroundProcess",
+  "parent":{
+    "name":"Mainframe",
+    "path":"folders/_Packages/Alphish/Mainframe.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

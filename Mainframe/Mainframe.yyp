@@ -23,6 +23,8 @@
   "name":"Mainframe",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ctor_MainframeBackgroundAction","path":"scripts/ctor_MainframeBackgroundAction/ctor_MainframeBackgroundAction.yy",},},
+    {"id":{"name":"ctor_MainframeBackgroundProcess","path":"scripts/ctor_MainframeBackgroundProcess/ctor_MainframeBackgroundProcess.yy",},},
     {"id":{"name":"ctor_MainframeEvent","path":"scripts/ctor_MainframeEvent/ctor_MainframeEvent.yy",},},
     {"id":{"name":"ctor_MainframeEventAction","path":"scripts/ctor_MainframeEventAction/ctor_MainframeEventAction.yy",},},
     {"id":{"name":"funcs_Mainframe","path":"scripts/funcs_Mainframe/funcs_Mainframe.yy",},},
