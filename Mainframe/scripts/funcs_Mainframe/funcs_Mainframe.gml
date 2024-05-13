@@ -77,3 +77,126 @@ function mainframe_get_event(_event) {
     else
         throw MainframeException.event_not_found($"Cannot resolve a mainframe event using a {typeof(_event)} value.");
 }
+
+/// @func mainframe_event_add_action(event,callback,[order])
+/// @desc Adds a callback action to the given mainframe event and returns the action.
+/// @arg {Struct.MainframeEvent,String} event       The event to add the action to.
+/// @arg {Function} callback                        The action callback to execute during the event processing.
+/// @arg {Real} [order]                             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_event_add_action(_event, _callback, _order = 0) {
+    var _resolved_event = mainframe_get_event(_event);
+    return _resolved_event.add_action(_callback, _order);
+}
+
+/// @func mainframe_event_add_user_event(event,object,number,[order])
+/// @desc Adds a user event action to the given mainframe event and returns the action.
+/// @arg {Struct.MainframeEvent,String} event       The event to add the action to.
+/// @arg {Asset.GMObject,Id.Instance} object        The object or instance to execute the user event of.
+/// @arg {Real} number                              The number of the user event.
+/// @arg {Real} [order]                             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_event_add_user_event(_event, _object, _number, _order = 0) {
+    var _resolved_event = mainframe_get_event(_event);
+    return _resolved_event.add_user_event(_object, _number, _order);
+}
+
+/// @func mainframe_event_add_method_call(event,caller,name,[order])
+/// @desc Adds a method call action to the given mainframe event and returns the action.
+/// @arg {Struct.MainframeEvent,String} event       The event to add the action to.
+/// @arg {Any} caller                               The object, instance or struct to execute the method of.
+/// @arg {String} name                              The name of the method.
+/// @arg {Real} [order]                             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_event_add_method_call(_event, _caller, _name, _order = 0) {
+    var _resolved_event = mainframe_get_event(_event);
+    return _resolved_event.add_method_call(_caller, _name, _order);
+}
+
+/// @func mainframe_begin_step_add_action(callback,[order])
+/// @desc Adds a callback action to the Begin Step mainframe event and returns the action.
+/// @arg {Function} callback        The action callback to execute during the event processing.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_begin_step_add_action(_callback, _order = 0) {
+    return mainframe_event_add_action("begin_step", _callback, _order);
+}
+
+/// @func mainframe_begin_step_add_user_event(object,number,[order])
+/// @desc Adds a user event action to the Begin Step mainframe event and returns the action.
+/// @arg {Asset.GMObject,Id.Instance} object        The object or instance to execute the user event of.
+/// @arg {Real} number                              The number of the user event.
+/// @arg {Real} [order]                             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_begin_step_add_user_event(_object, _number, _order = 0) {
+    return mainframe_event_add_user_event("begin_step", _object, _number, _order);
+}
+
+/// @func mainframe_begin_step_add_method_call(caller,name,[order])
+/// @desc Adds a method call action to the Begin Step mainframe event and returns the action.
+/// @arg {Any} caller       The object, instance or struct to execute the method of.
+/// @arg {String} name      The name of the method.
+/// @arg {Real} [order]     The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_begin_step_add_method_call(_caller, _name, _order = 0) {
+    return mainframe_event_add_method_call("begin_step", _caller, _name, _order);
+}
+
+/// @func mainframe_step_add_action(callback,[order])
+/// @desc Adds a callback action to the Step mainframe event and returns the action.
+/// @arg {Function} callback        The action callback to execute during the event processing.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_step_add_action(_callback, _order = 0) {
+    return mainframe_event_add_action("step", _callback, _order);
+}
+
+/// @func mainframe_step_add_user_event(object,number,[order])
+/// @desc Adds a user event action to the Step mainframe event and returns the action.
+/// @arg {Asset.GMObject,Id.Instance} object        The object or instance to execute the user event of.
+/// @arg {Real} number                              The number of the user event.
+/// @arg {Real} [order]                             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_step_add_user_event(_object, _number, _order = 0) {
+    return mainframe_event_add_user_event("step", _object, _number, _order);
+}
+
+/// @func mainframe_step_add_method_call(caller,name,[order])
+/// @desc Adds a method call action to the Step mainframe event and returns the action.
+/// @arg {Any} caller       The object, instance or struct to execute the method of.
+/// @arg {String} name      The name of the method.
+/// @arg {Real} [order]     The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_step_add_method_call(_caller, _name, _order = 00) {
+    return mainframe_event_add_method_call("step", _caller, _name, _order);
+}
+
+/// @func mainframe_draw_gui_end_add_action(callback,[order])
+/// @desc Adds a callback action to the Draw GUI End mainframe event and returns the action.
+/// @arg {Function} callback        The action callback to execute during the event processing.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_draw_gui_end_add_action(_callback, _order = 0) {
+    return mainframe_event_add_action("draw_gui_end", _callback, _order);
+}
+
+/// @func mainframe_draw_gui_end_add_user_event(object,number,[order])
+/// @desc Adds a user event action to the Draw GUI End mainframe event and returns the action.
+/// @arg {Asset.GMObject,Id.Instance} object        The object or instance to execute the user event of.
+/// @arg {Real} number                              The number of the user event.
+/// @arg {Real} [order]                             The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_draw_gui_end_add_user_event(_object, _number, _order = 0) {
+    return mainframe_event_add_user_event("draw_gui_end", _object, _number, _order);
+}
+
+/// @func mainframe_draw_gui_end_add_method_call(caller,name,[order])
+/// @desc Adds a method call action to the Draw GUI End mainframe event and returns the action.
+/// @arg {Any} caller       The object, instance or struct to execute the method of.
+/// @arg {String} name      The name of the method.
+/// @arg {Real} [order]     The value of the execution order (actions with a lower order are executed first).
+/// @returns {Struct.MainframeEventAction}
+function mainframe_draw_gui_end_add_method_call(_caller, _name, _order = 0) {
+    return mainframe_event_add_method_call("draw_gui_end", _caller, _name, _order);
+}
+
