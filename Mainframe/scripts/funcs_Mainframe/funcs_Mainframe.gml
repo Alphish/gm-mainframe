@@ -200,3 +200,54 @@ function mainframe_draw_gui_end_add_method_call(_caller, _name, _order = 0) {
     return mainframe_event_add_method_call("draw_gui_end", _caller, _name, _order);
 }
 
+// ---------------------
+// Background processing
+// ---------------------
+
+/// @func mainframe_background_add_action(callback,[order],[minduration],[minsteps])
+/// @desc Adds a callback action to the Post-Frame background processing and returns the action.
+/// @arg {Function} callback        The action callback to execute during background processing; it should accept the minimum number of steps and the target time.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
+/// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
+/// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
+/// @returns {Struct.MainframeBackgroundAction}
+function mainframe_background_add_action(_callback, _order = 0, _minduration = 0, _minsteps = 1) {
+    var _process = mainframe_get().post_frame_process;
+    return _process.add_action(_callback, _order, _minduration, _minsteps);
+}
+
+/// @func mainframe_background_add_method_call(caller,name,[order],[minduration],[minsteps])
+/// @desc Adds a method call action to the Post-Frame background processing and returns the action.
+/// @arg {Any} caller               The object, instance or struct to execute the method of.
+/// @arg {String} name              The name of the method; it should accept the minimum number of steps and the target time.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
+/// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
+/// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
+/// @returns {Struct.MainframeBackgroundAction}
+function mainframe_background_add_method_call(_caller, _name, _order = 0, _minduration = 0, _minsteps = 1) {
+    var _process = mainframe_get().post_frame_process;
+    return _process.add_method_call(_caller, _name, _order, _minduration, _minsteps);
+}
+
+/// @func mainframe_post_frame_add_action(callback,[order],[minduration],[minsteps])
+/// @desc Adds a callback action to the Post-Frame background processing and returns the action.
+/// @arg {Function} callback        The action callback to execute during background processing; it should accept the minimum number of steps and the target time.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
+/// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
+/// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
+/// @returns {Struct.MainframeBackgroundAction}
+function mainframe_post_frame_add_action(_callback, _order = 0, _minduration = 0, _minsteps = 1) {
+    return mainframe_background_add_action(_callback, _order, _minduration, _minsteps);
+}
+
+/// @func mainframe_post_frame_add_method_call(caller,name,[order],[minduration],[minsteps])
+/// @desc Adds a method call action to the Post-Frame background processing and returns the action.
+/// @arg {Any} caller               The object, instance or struct to execute the method of.
+/// @arg {String} name              The name of the method; it should accept the minimum number of steps and the target time.
+/// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
+/// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
+/// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
+/// @returns {Struct.MainframeBackgroundAction}
+function mainframe_post_frame_add_method_call(_caller, _name, _order = 0, _minduration = 0, _minsteps = 1) {
+    return mainframe_background_add_method_call(_caller, _name, _order, _minduration, _minsteps);
+}
