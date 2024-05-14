@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="200"
+   viewBox="0 0 200 200.00001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   sodipodi:docname="Icons.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="px"
+     showgrid="false"
+     units="px"
+     inkscape:snap-global="false"
+     inkscape:zoom="1"
+     inkscape:cx="282"
+     inkscape:cy="258.5"
+     inkscape:window-width="2560"
+     inkscape:window-height="1377"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="126.37061"
+       y="481.95138"
+       width="739.05021"
+       height="149.90169"
+       id="rect17325" />
+    <rect
+       x="53.16281"
+       y="337.27881"
+       width="584.79091"
+       height="244.89754"
+       id="rect2371" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#30b814;fill-opacity:1;stroke-width:2;stroke-linecap:square;stroke-dashoffset:3.6"
+       id="rect850"
+       width="200"
+       height="200"
+       x="0"
+       y="0"
+       inkscape:export-filename="C:\Omnipocket\Development\GameMaker\Libraries\gm-mainframe\Graphics\marketplace_logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#30b814;fill-opacity:1;stroke-width:2;stroke-linecap:square;stroke-dashoffset:3.6"
+       id="rect831"
+       width="630"
+       height="500"
+       x="0"
+       y="250"
+       inkscape:export-filename="C:\Omnipocket\Development\GameMaker\Libraries\gm-mainframe\Graphics\itch_logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#0d4d00;fill-opacity:1;stroke-width:2;stroke-linecap:square;stroke-dashoffset:3.6"
+       id="rect25757"
+       width="170"
+       height="500"
+       x="0"
+       y="250" />
+    <g
+       id="g28117"
+       transform="translate(1.8619954)"
+       style="fill:#4dcc33;fill-opacity:1">
+      <text
+         xml:space="preserve"
+         id="text2369"
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:85.3333px;line-height:1.25;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Bold';letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect2371);fill:#4dcc33;fill-opacity:1;stroke-width:1.07182"
+         transform="matrix(0,-0.8704767,1,0,-328.39367,775.8101)"><tspan
+           x="53.162109"
+           y="414.14364"
+           id="tspan32737">MAINFRAME</tspan></text>
+      <text
+         xml:space="preserve"
+         id="text17323"
+         style="font-size:53.3333px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;white-space:pre;shape-inside:url(#rect17325);fill:#4dcc33;fill-opacity:1"
+         transform="rotate(-90,222.05365,610.67149)"><tspan
+           x="126.37109"
+           y="529.13864"
+           id="tspan32739">for GameMaker</tspan></text>
+    </g>
+    <rect
+       style="fill:#000000;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1199"
+       width="120"
+       height="72"
+       x="0"
+       y="-100" />
+    <rect
+       style="fill:#ecf134;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1201"
+       width="80"
+       height="60"
+       x="20"
+       y="-94" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1203"
+       width="12"
+       height="12"
+       x="4"
+       y="-94" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1205"
+       width="12"
+       height="12"
+       x="4"
+       y="-78" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1207"
+       width="12"
+       height="12"
+       x="4"
+       y="-62" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1209"
+       width="12"
+       height="12"
+       x="4"
+       y="-46" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1211"
+       width="12"
+       height="12"
+       x="104"
+       y="-94" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1213"
+       width="12"
+       height="12"
+       x="104"
+       y="-78" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1215"
+       width="12"
+       height="12"
+       x="104"
+       y="-62" />
+    <rect
+       style="fill:#f2f677;fill-opacity:1;stroke-width:2;stroke-linecap:round;stroke-linejoin:round"
+       id="rect1217"
+       width="12"
+       height="12"
+       x="104"
+       y="-46" />
+    <g
+       id="g29739">
+      <path
+         id="path7915"
+         style="fill:#1e730d;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,320 v 90 h 300 v -90 z" />
+      <rect
+         style="fill:#1e730d;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+         id="rect7917"
+         width="300"
+         height="180"
+         x="250"
+         y="410" />
+      <path
+         id="path7919"
+         style="fill:#1e730d;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,680 v -90 h 300 v 90 z" />
+      <path
+         id="path7921"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+         d="M 250,410 V 590 H 550 V 410 Z m 10,15 h 30 v 30 h -30 z m 40,0 H 500 V 575 H 300 Z m 210,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z" />
+      <path
+         id="path7923"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,320 v 90 h 300 v -90 h -50 v 75 H 300 v -75 z m 10,5 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z" />
+      <path
+         id="path7925"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:1.99999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,680 v -90 h 300 v 90 H 500 V 605 H 300 v 75 z m 10,-5 h 30 v -30 h -30 z m 250,0 h 30 V 645 H 510 Z M 260,635 h 30 v -30 h -30 z m 250,0 h 30 v -30 h -30 z" />
+    </g>
+    <g
+       id="g29753"
+       transform="matrix(0.4,0,0,0.4,-60,-100)"
+       style="stroke-width:2.5">
+      <path
+         id="path29741"
+         style="fill:#1e730d;fill-opacity:1;stroke-width:4.99998;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,320 v 90 h 300 v -90 z" />
+      <rect
+         style="fill:#1e730d;fill-opacity:1;stroke-width:4.99998;stroke-linecap:round;stroke-linejoin:round"
+         id="rect29743"
+         width="300"
+         height="180"
+         x="250"
+         y="410" />
+      <path
+         id="path29745"
+         style="fill:#1e730d;fill-opacity:1;stroke-width:4.99998;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,680 v -90 h 300 v 90 z" />
+      <path
+         id="path29747"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:4.99998;stroke-linecap:round;stroke-linejoin:round"
+         d="M 250,410 V 590 H 550 V 410 Z m 10,15 h 30 v 30 h -30 z m 40,0 H 500 V 575 H 300 Z m 210,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z" />
+      <path
+         id="path29749"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:4.99998;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,320 v 90 h 300 v -90 h -50 v 75 H 300 v -75 z m 10,5 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z" />
+      <path
+         id="path29751"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:4.99998;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,680 v -90 h 300 v 90 H 500 V 605 H 300 v 75 z m 10,-5 h 30 v -30 h -30 z m 250,0 h 30 V 645 H 510 Z M 260,635 h 30 v -30 h -30 z m 250,0 h 30 v -30 h -30 z" />
+    </g>
+    <rect
+       style="fill:#30b814;fill-opacity:1;stroke-width:2;stroke-linecap:square;stroke-dashoffset:3.6"
+       id="rect32479"
+       width="64"
+       height="64"
+       x="240"
+       y="0"
+       inkscape:export-filename="C:\Omnipocket\Development\GameMaker\Libraries\gm-undo-stack\Logo.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g32493"
+       transform="matrix(0.13333333,0,0,0.13333333,218.66667,-34.666665)"
+       style="stroke-width:7.5">
+      <path
+         id="path32481"
+         style="fill:#1e730d;fill-opacity:1;stroke-width:14.9999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,320 v 90 h 300 v -90 z" />
+      <rect
+         style="fill:#1e730d;fill-opacity:1;stroke-width:14.9999;stroke-linecap:round;stroke-linejoin:round"
+         id="rect32483"
+         width="300"
+         height="180"
+         x="250"
+         y="410" />
+      <path
+         id="path32485"
+         style="fill:#1e730d;fill-opacity:1;stroke-width:14.9999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,680 v -90 h 300 v 90 z" />
+      <path
+         id="path32487"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:14.9999;stroke-linecap:round;stroke-linejoin:round"
+         d="M 250,410 V 590 H 550 V 410 Z m 10,15 h 30 v 30 h -30 z m 40,0 H 500 V 575 H 300 Z m 210,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z" />
+      <path
+         id="path32489"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:14.9999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,320 v 90 h 300 v -90 h -50 v 75 H 300 v -75 z m 10,5 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z m -250,40 h 30 v 30 h -30 z m 250,0 h 30 v 30 h -30 z" />
+      <path
+         id="path32491"
+         style="fill:#0c2e05;fill-opacity:1;stroke-width:14.9999;stroke-linecap:round;stroke-linejoin:round"
+         d="m 250,680 v -90 h 300 v 90 H 500 V 605 H 300 v 75 z m 10,-5 h 30 v -30 h -30 z m 250,0 h 30 V 645 H 510 Z M 260,635 h 30 v -30 h -30 z m 250,0 h 30 v -30 h -30 z" />
+    </g>
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.999997;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3.6;stroke-opacity:1"
+       id="rect32495"
+       width="63"
+       height="63"
+       x="240.5"
+       y="0.49999851"
+       inkscape:export-filename="C:\Omnipocket\Development\GameMaker\Libraries\gm-mainframe\Graphics\syspr_Mainframe.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>
