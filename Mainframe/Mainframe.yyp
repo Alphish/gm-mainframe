@@ -13,6 +13,7 @@
     {"$GMFolder":"","%Name":"_Packages","folderPath":"folders/_Packages.yy","name":"_Packages","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Alphish","folderPath":"folders/_Packages/Alphish.yy","name":"Alphish","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Mainframe","folderPath":"folders/_Packages/Alphish/Mainframe.yy","name":"Mainframe","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Demo","folderPath":"folders/Demo.yy","name":"Demo","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "IncludedFiles":[],
   "isEcma":false,
@@ -23,6 +24,7 @@
   "name":"Mainframe",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ctrl_Input","path":"objects/ctrl_Input/ctrl_Input.yy",},},
     {"id":{"name":"sys_Mainframe","path":"objects/sys_Mainframe/sys_Mainframe.yy",},},
     {"id":{"name":"ctor_MainframeBackgroundAction","path":"scripts/ctor_MainframeBackgroundAction/ctor_MainframeBackgroundAction.yy",},},
     {"id":{"name":"ctor_MainframeBackgroundProcess","path":"scripts/ctor_MainframeBackgroundProcess/ctor_MainframeBackgroundProcess.yy",},},
