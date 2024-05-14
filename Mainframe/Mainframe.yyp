@@ -24,6 +24,8 @@
   "name":"Mainframe",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"fnt_Default","path":"fonts/fnt_Default/fnt_Default.yy",},},
+    {"id":{"name":"ctrl_Countup","path":"objects/ctrl_Countup/ctrl_Countup.yy",},},
     {"id":{"name":"ctrl_Ingame","path":"objects/ctrl_Ingame/ctrl_Ingame.yy",},},
     {"id":{"name":"ctrl_Input","path":"objects/ctrl_Input/ctrl_Input.yy",},},
     {"id":{"name":"obj_Player","path":"objects/obj_Player/obj_Player.yy",},},
