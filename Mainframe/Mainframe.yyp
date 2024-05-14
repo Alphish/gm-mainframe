@@ -30,6 +30,7 @@
     {"id":{"name":"ctor_MainframeEventAction","path":"scripts/ctor_MainframeEventAction/ctor_MainframeEventAction.yy",},},
     {"id":{"name":"ctor_MainframeException","path":"scripts/ctor_MainframeException/ctor_MainframeException.yy",},},
     {"id":{"name":"funcs_Mainframe","path":"scripts/funcs_Mainframe/funcs_Mainframe.yy",},},
+    {"id":{"name":"syspr_Mainframe","path":"sprites/syspr_Mainframe/syspr_Mainframe.yy",},},
   ],
   "resourceType":"GMProject",
   "resourceVersion":"2.0",

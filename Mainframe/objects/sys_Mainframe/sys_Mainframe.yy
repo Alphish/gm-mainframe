@@ -36,7 +36,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"syspr_Mainframe",
+    "path":"sprites/syspr_Mainframe/syspr_Mainframe.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
