@@ -23,7 +23,6 @@
   },
   "name":"Mainframe",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"fnt_Default","path":"fonts/fnt_Default/fnt_Default.yy",},},
     {"id":{"name":"ctrl_Countup","path":"objects/ctrl_Countup/ctrl_Countup.yy",},},
     {"id":{"name":"ctrl_Ingame","path":"objects/ctrl_Ingame/ctrl_Ingame.yy",},},
@@ -32,6 +31,7 @@
     {"id":{"name":"obj_Wall","path":"objects/obj_Wall/obj_Wall.yy",},},
     {"id":{"name":"ctrl_DirtGfx","path":"objects/ctrl_DirtGfx/ctrl_DirtGfx.yy",},},
     {"id":{"name":"sys_Mainframe","path":"objects/sys_Mainframe/sys_Mainframe.yy",},},
+    {"id":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
     {"id":{"name":"ctor_MainframeBackgroundAction","path":"scripts/ctor_MainframeBackgroundAction/ctor_MainframeBackgroundAction.yy",},},
     {"id":{"name":"ctor_MainframeBackgroundProcess","path":"scripts/ctor_MainframeBackgroundProcess/ctor_MainframeBackgroundProcess.yy",},},
     {"id":{"name":"ctor_MainframeEvent","path":"scripts/ctor_MainframeEvent/ctor_MainframeEvent.yy",},},
@@ -45,7 +45,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
