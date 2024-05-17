@@ -228,3 +228,23 @@ function mainframe_post_frame_add_method_call(_caller, _name, _order = 0, _mindu
     var _process = mainframe_get().post_frame_process;
     return _process.add_method_call(_caller, _name, _order, _minduration, _minsteps);
 }
+
+/// @func mainframe_set_frame_margin(margin)
+/// @desc Sets the Mainframe frame margin (in milliseconds). Larger frame margins leave less time for post-frame processing, but leave more leeway to maintain a stable framerate.
+/// @arg {Real} margin          The new frame margin (in milliseconds).
+function mainframe_set_frame_margin(_margin) {
+    mainframe_get().frame_margin = _margin;
+}
+
+/// @func mainframe_set_frame_duration(duration)
+/// @desc Sets the Mainframe frame duration (in milliseconds), overriding the game speed based duration. Larger duration will leave more time for post-frame processing, but will lead to a lower framerate.
+/// @arg {Real} duration        The new frame duration (in milliseconds).
+function mainframe_set_frame_duration(_duration) {
+    mainframe_get().frame_duration = _duration;
+}
+
+/// @func mainframe_clear_frame_duration()
+/// @desc Clears the Mainframe frame duration, so that desired frame duration is based on the game speed instead.
+function mainframe_clear_frame_duration() {
+    mainframe_get().frame_duration = undefined;
+}
