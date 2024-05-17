@@ -6,7 +6,7 @@
 
 # Demo Example
 
-The following page describes how Mainframe is applied in a demo example, available for download [here](http://www.example.com).
+The following page describes how Mainframe is applied in a demo example, available for download [here](/Release/Mainframe%20Demo.yyz?raw=1).
 
 The demo showcases Mainframe events management and use of post-frame processing in a simple maze game.
 
