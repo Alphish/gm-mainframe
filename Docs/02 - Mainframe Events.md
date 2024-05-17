@@ -1,6 +1,6 @@
 [<< Back to home](https://github.com/Alphish/gm-mainframe)
 
-[<< 01 - Overview](/Docs/Overview/01%20-%20Overview.md) | **02 - Mainframe Events** | [03 - Post-frame Processing >>](/Docs/03-%20-%20Post-frame%20Processing.md)
+[<< 01 - Overview](/Docs/01%20-%20Overview.md) | **02 - Mainframe Events** | [03 - Post-frame Processing >>](/Docs/03-%20-%20Post-frame%20Processing.md)
 
 -----
 
@@ -148,4 +148,4 @@ mainframe_room_start_add_method_call(obj_BgmPlayer, "play_bgm", /* order */ 10);
 
 -----
 
-[<< 01 - Overview](/Docs/Overview/01%20-%20Overview.md) | **02 - Mainframe Events** | [03 - Post-frame Processing >>](/Docs/03-%20-%20Post-frame%20Processing.md)
+[<< 01 - Overview](/Docs/01%20-%20Overview.md) | **02 - Mainframe Events** | [03 - Post-frame Processing >>](/Docs/03-%20-%20Post-frame%20Processing.md)
