@@ -21,8 +21,8 @@ The following pages describe the package functionality in more detail:
 
 - [Overview](/Docs/01%20-%20Overview.md) - roughly describes the package in general and has installation instructions
 - [Mainframe Events](/Docs/02%20-%20Mainframe%20Events.md) - describes how to set up and use Mainframe events to organise the game logic
-- [Post-frame Processing](/Docs/03-%20-%20Post-frame%20Processing.md) - describes how to use post-frame processing to do additional work in the background
+- [Post-frame Processing](/Docs/03%20-%20Post-frame%20Processing.md) - describes how to use post-frame processing to do additional work in the background
 
 Additionally, there's a simple demonstration of the package functionality, available here: [Mainframe Demo.yyz](http://www.example.com)
 
-The [Demo Example documentation page](/Docs/04-%20-%20Demo%20Example.md) explains how Mainframe features are applied in the demo application, step by step.
+The [Demo Example documentation page](/Docs/04%20-%20Demo%20Example.md) explains how Mainframe features are applied in the demo application, step by step.

@@ -1,6 +1,6 @@
 [<< Back to home](https://github.com/Alphish/gm-mainframe)
 
-[<< 03 - Post-frame Processing](/Docs/03-%20-%20Post-frame%20Processing.md) | **04 - Demo Example**
+[<< 03 - Post-frame Processing](/Docs/03%20-%20Post-frame%20Processing.md) | **04 - Demo Example**
 
 -----
 
@@ -284,4 +284,4 @@ Thus, this demo should cover basic use of Mainframe events and/or post-frame pro
 
 -----
 
-[<< 03 - Post-frame Processing](/Docs/03-%20-%20Post-frame%20Processing.md) | **04 - Demo Example**
+[<< 03 - Post-frame Processing](/Docs/03%20-%20Post-frame%20Processing.md) | **04 - Demo Example**

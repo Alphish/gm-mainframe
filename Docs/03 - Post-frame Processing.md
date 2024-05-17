@@ -1,6 +1,6 @@
 [<< Back to home](https://github.com/Alphish/gm-mainframe)
 
-[<< 02 - Mainframe Events](/Docs/02%20-%20Mainframe%20Events.md) | **03 - Post-frame Processing** | [04 - Demo Example >>](/Docs/04-%20-%20Demo%20Example.md)
+[<< 02 - Mainframe Events](/Docs/02%20-%20Mainframe%20Events.md) | **03 - Post-frame Processing** | [04 - Demo Example >>](/Docs/04%20-%20Demo%20Example.md)
 
 -----
 
@@ -181,4 +181,4 @@ An alternative to tweaking the frame margin and duration is setting a lower game
 
 -----
 
-[<< 02 - Mainframe Events](/Docs/02%20-%20Mainframe%20Events.md) | **03 - Post-frame Processing** | [04 - Demo Example >>](/Docs/04-%20-%20Demo%20Example.md)
+[<< 02 - Mainframe Events](/Docs/02%20-%20Mainframe%20Events.md) | **03 - Post-frame Processing** | [04 - Demo Example >>](/Docs/04%20-%20Demo%20Example.md)
