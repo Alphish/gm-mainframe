@@ -1,9 +1,9 @@
 {
   "$GMScript":"",
-  "%Name":"ctor_MainframeBackgroundProcess",
+  "%Name":"ctor_MainframePostFrameProcess",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"ctor_MainframeBackgroundProcess",
+  "name":"ctor_MainframePostFrameProcess",
   "parent":{
     "name":"Mainframe",
     "path":"folders/_Packages/Alphish/Mainframe.yy",

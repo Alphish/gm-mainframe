@@ -1,11 +1,6 @@
-/// @func MainframeBackgroundProcess(name)
-/// @desc The mainframe background process, managing its actions and performing as much processing as possible.
-/// @arg {String} name      The name of the background process.
-function MainframeBackgroundProcess(_name) constructor {
-    
-    /// @desc The name of the background process.
-    /// @type {String}
-    name = _name;
+/// @func MainframePostFrameProcess(name)
+/// @desc The post-frame process, managing its actions and performing as much processing as possible in the remaining frame time available.
+function MainframePostFrameProcess() constructor {
     
     /// @ignore
     actions = [];
@@ -15,14 +10,14 @@ function MainframeBackgroundProcess(_name) constructor {
     // --------------
     
     /// @func add_action(callback,[order],[minduration],[minsteps])
-    /// @desc Adds a callback action to the mainframe background process and returns the action.
-    /// @arg {Funciton} callback        The action callback to execute during background processing; it should accept the minimum number of steps and the target time.
+    /// @desc Adds a callback post-frame action and it.
+    /// @arg {Funciton} callback        The action callback to execute during post-frame processing; it should accept the minimum number of steps and the target time.
     /// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
     /// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
     /// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
-    /// @returns {Struct.MainframeBackgroundAction}
+    /// @returns {Struct.MainframePostFrameAction}
     static add_action = function(_callback, _order = 0, _minduration = 0, _minsteps = 1) {
-        var _action = new MainframeBackgroundAction(self, _callback, _order, _minduration, _minsteps);
+        var _action = new MainframePostFrameAction(self, _callback, _order, _minduration, _minsteps);
         var _idx = array_length(actions);
         while (_idx > 0 && actions[_idx - 1].order > _order) {
             _idx--;
@@ -32,13 +27,13 @@ function MainframeBackgroundProcess(_name) constructor {
     }
     
     /// @func add_method_call(caller,name,[order],[minduration],[minsteps])
-    /// @desc Adds a method call action to the mainframe background process and returns the action.
+    /// @desc Adds a method call post-frame action and returns it.
     /// @arg {Any} caller               The object, instance or struct to execute the method of.
     /// @arg {String} name              The name of the method; it should accept the minimum number of steps and the target time.
     /// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
     /// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
     /// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
-    /// @returns {Struct.MainframeBackgroundAction}
+    /// @returns {Struct.MainframePostFrameAction}
     static add_method_call = function(_caller, _name, _order = 0, _minduration = 0, _minsteps = 1) {
         var _callback = mainframe_callback_method_call(_caller, _name);
         return add_action(_callback, _order, _minduration, _minsteps);
@@ -49,8 +44,8 @@ function MainframeBackgroundProcess(_name) constructor {
     // ----------------
     
     /// @func remove(action)
-    /// @desc Removes the given action from the mainframe background process.
-    /// @arg {Struct.MainframeEventAction} action       The action to remove.
+    /// @desc Removes the given post-frame action.
+    /// @arg {Struct.MainframePostFrameAction} action       The action to remove.
     static remove = function(_action) {
         var _idx = array_get_index(actions, _action);
         if (_idx >= 0) {
@@ -59,7 +54,7 @@ function MainframeBackgroundProcess(_name) constructor {
     }
     
     /// @func clear()
-    /// @desc Removes all actions from the mainframe background process.
+    /// @desc Removes all post-frame actions.
     static clear = function() {
         array_resize(actions, 0);
     }
@@ -68,20 +63,20 @@ function MainframeBackgroundProcess(_name) constructor {
     // Performing actions
     // ------------------
     
-    /// @func perform_minimum()
-    /// @desc Performs the minimum required processing for all actions in the background process.
-    static perform_minimum = function() {
+    /// @func perform_reserved()
+    /// @desc Performs the reserved processing for all post-frame action.
+    static perform_reserved = function() {
         for (var i = 0, _count = array_length(actions); i < _count; i++) {
-            actions[i].perform_minimum();
+            actions[i].perform_reserved();
         }
     }
     
-    /// @func perform_until(time)
-    /// @desc Uses the remaining available time to perform the additional processing for the background process actions.
+    /// @func perform_additional(time)
+    /// @desc Performs the additional processing for post-frame actions, starting from the highest priority (lowest order) ones.
     /// @arg {Real} time        The moment until which the additional processing can be executed.
-    static perform_until = function(_time) {
+    static perform_additional = function(_time) {
         for (var i = 0, _count = array_length(actions); i < _count; i++) {
-            actions[i].perform_until(_time);
+            actions[i].perform_additional(_time);
             if (get_timer() > _time)
                 break;
         }
