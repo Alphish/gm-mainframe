@@ -120,7 +120,7 @@ Every game frame, the following happens:
     - the **additional post-frame processing** is executed starting from the lowest order actions, up to the additional processing target time
 
 Ideally, such a cycle makes near-optimal use of the available frame time on the one hand, while matching the intended game speed on the other hand. However, certain problems can disrupt this process.
-###### Long base processing
+#### Long base processing
 
 If core processing together with the reserved post-frame processing takes much longer than the expected frame time, then there's no escaping framerate drops - the computer simply can't keep up with the main computations, let alone has time to spare for the additional processing.
 
@@ -128,7 +128,7 @@ For some games, the issue may be alleviated by lowering the game speed (e.g. fro
 
 If post-frame work takes unreasonably long to execute, one may try increasing the reserved number of steps and/or duration; however, it will keep decreasing the framerate. Another option is moving some of the post-frame work in dedicated loading screens rather than squeezing enough processing time over the course of the game. At any rate, when the game runs slow, the primary problem isn't the lack of the additional post-frame processing, but the game running slow.
 
-###### Final iteration remainder
+#### Final iteration remainder
 
 Usually, a post-frame action will run a function with the following structure:
 
@@ -148,7 +148,7 @@ You may notice such a method doesn't predict when the upcoming iteration will ex
 
 For example, if the final iteration starts 5 microseconds before the target time and then lasts for 20 microseconds, the post-frame execution will actually end 15 microseconds later than scheduled - the final iteration remainder. That said, as long as individual iterations don't take too long, the final iteration remainder will be safely absorbed by the frame margin. It only becomes a problem when a single iteration may take similar or greater time than the frame margin.
 
-###### Adjacent events problem
+#### Adjacent events problem
 
 Assuming the base processing doesn't use up the available frame time, there is enough room for additional processing without affecting the framerate. Properly estimated *next frame expected time* and a sufficient *frame margin* should mostly prevent lags. However, those estimations fail to take into account Begin Step GameMaker events executed before the Mainframe gets its turn, as well as Draw GUI End GameMaker events executed after post-frame additional processing.
 

@@ -58,11 +58,11 @@ The maze game needs the following entities:
 
 Since it's a simple demonstration, there are no win conditions, just walking around, enjoying the view and trying not to run into the enemy.
 
-###### Wall
+#### Wall
 
 Let's start with a wall object, called `obj_Wall`. Make a sprite for it and mark it as "Solid". That's the easiest part done.
 
-###### Player
+#### Player
 
 Now, let's make the player object, called `obj_Player`. Make another sprite for it, and then set up a simple speed variable to 4 pixels per frame in its **Create** event:
 
@@ -85,7 +85,7 @@ if (place_free(x, y + _vdir * spd))
 
 This will implement a simple four-directional movement using the `ctrl_Input` logical inputs. It doesn't use precise collision detection, but as long as player and walls coordinates stay snapped to 4x4 grid, it's not a problem. Going out of room can be solved with a clever level design technique known as "place them walls around room edges".
 
-###### Enemy
+#### Enemy
 
 Finally, let's make the enemy object, called `obj_Enemy`. The enemy will move at a constant speed set at start, and if it meets a wall, it will turn back, bouncing between two points.
 
@@ -112,7 +112,7 @@ if (place_meeting(x, y, obj_Enemy))
     room_restart();
 ```
 
-##### In-game controller
+#### In-game controller
 
 If you run the game - having placed the player, some walls and enemies - you'll notice they do a whole lot of nothing. That's because the player and enemies logic is in user-defined events which aren't executed automatically.
 
