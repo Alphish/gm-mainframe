@@ -1,6 +1,6 @@
 # GM Mainframe system
 
-[[/Graphics/main_logo.png|Mainframe Logo]]
+[[/images/main_logo.png|Mainframe Logo]]
 
 **Mainframe** is a GameMaker system for managing execution of logic within a frame. Its major components are:
 
