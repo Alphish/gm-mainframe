@@ -33,6 +33,7 @@ The Mainframe system is expected to be used throughout the entire game run. Thus
 **Note:** Only one instance of `sys_Mainframe` object can exist at a time.
 
 **Note:** You cannot use any Mainframe functionality (setting up events, post-frame processing etc.) before the Mainframe system instance is created. In particular, you cannot use it in raw script function (processed before the first room) or when creating earlier instances. If need be, you may [Instance Creation Order](https://manual.gamemaker.io/monthly/en/#t=The_Asset_Editors%2FRoom_Properties%2FRoom_Properties.htm%23creation_order) to ensure `sys_Mainframe` instance is created before Mainframe-dependent instances.
+
 -----
 
 **01 - Overview** | [02 - Mainframe Events >>](/Docs/02%20-%20Mainframe%20Events.md)
