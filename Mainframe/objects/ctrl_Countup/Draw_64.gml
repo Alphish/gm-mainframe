@@ -1,12 +1,17 @@
+/// @description Drawing instructions + progress
+
+// top and bottom bars to display instructions/informations
 draw_set_alpha(0.7);
 draw_set_color(c_black);
 draw_rectangle(0, room_height - 20, room_width, room_height, false);
 draw_rectangle(0, 0, room_width, 19, false);
 
+// progress bar at the bottom
 draw_set_alpha(0.7);
 draw_set_color(c_teal);
 draw_rectangle(0, room_height - 20, round(room_width * counter / target), room_height, false);
 
+// instructions and informations text
 draw_set_alpha(1);
 draw_set_color(c_white);
 draw_set_font(fnt_Default);
