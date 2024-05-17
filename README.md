@@ -9,6 +9,8 @@
 - **Mainframe events**, which allow specific ordering and activation/deactivation of individual actions
 - **Post-frame processing**, which uses the free time after core gameplay logic to perform tasks in the background
 
+You can also check out [the itch.io page](https://alphish-creature.itch.io/gm-mainframe).
+
 ## Installation
 
 - download the latest package version: [Alphish.Mainframe.\*.yymps](/Release/Alphish.Mainframe.0.8.0.yymps?raw=1)
