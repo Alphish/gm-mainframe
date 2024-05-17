@@ -1,6 +1,8 @@
-# GM Mainframe system
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Alphish/gm-mainframe/master/Graphics/main_logo.png">
+</p>
 
-[[/images/main_logo.png|Mainframe Logo]]
+# GM Mainframe system
 
 **Mainframe** is a GameMaker system for managing execution of logic within a frame. Its major components are:
 
