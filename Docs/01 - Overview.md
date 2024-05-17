@@ -17,7 +17,7 @@ Mainframe post-frame processing uses the frame time remaining after core gamepla
 
 ## Installation
 
-In order to install the Mainframe system, download its [Local Package file](http://www.example.com). After that, follow the [GameMaker manual instructions](https://manual.gamemaker.io/monthly/en/#t=IDE_Tools%2FLocal_Asset_Packages.htm) to import the package; you should import all the assets in it.
+In order to install the Mainframe system, download its [Local Package file](/Release/Alphish.Mainframe.0.8.0.yymps?raw=1). After that, follow the [GameMaker manual instructions](https://manual.gamemaker.io/monthly/en/#t=IDE_Tools%2FLocal_Asset_Packages.htm) to import the package; you should import all the assets in it.
 
 The package contains:
 - the Mainframe system object, called `sys_Mainframe` (along with its sprite for easier recognition)
