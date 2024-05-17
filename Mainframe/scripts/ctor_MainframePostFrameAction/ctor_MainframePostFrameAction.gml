@@ -1,11 +1,11 @@
-/// @func MainframeBackgroundAction(process,callback,[order],[minduration],[minsteps])
-/// @desc A mainframe background action, to be executed by the background process. It reserves a given duration and number of steps for each background processing frame.
-/// @arg {Struct.MainframeBackgroundProcess} process        The process the action belongs to.
-/// @arg {Function} callback                                The action callback to execute during background processing; it should accept the minimum number of steps and the target time.
+/// @func MainframePostFrameAction(process,callback,[order],[minduration],[minsteps])
+/// @desc A mainframe post-frame action, to be executed as a part of the post-frame process. It reserves a given duration and number of steps for each frame.
+/// @arg {Struct.MainframePostFrameProcess} process         The process the action belongs to.
+/// @arg {Function} callback                                The action callback to execute during post-frame processing; it should accept the minimum number of steps and the target time.
 /// @arg {Real} [order]                                     The value of the execution order (actions with a lower order take priority).
 /// @arg {Real} [minduration]                               The minimum processing duration reserved for each frame.
 /// @arg {Real} [minsteps]                                  The minimum number of processing steps reserved for each frame.
-function MainframeBackgroundAction(_process, _callback, _order = 0, _minduration = 0, _minsteps = 1) constructor {
+function MainframePostFrameAction(_process, _callback, _order = 0, _minduration = 0, _minsteps = 1) constructor {
     /// @ignore
     process = _process;
     /// @ignore
@@ -21,7 +21,7 @@ function MainframeBackgroundAction(_process, _callback, _order = 0, _minduration
     /// @type {Real}
     min_steps = _minsteps;
     
-    /// @desc Whether the action is executed during the background process or not.
+    /// @desc Whether the action is executed during the post-frame processing or not.
     /// @type {Bool}
     is_active = true;
     
@@ -30,8 +30,8 @@ function MainframeBackgroundAction(_process, _callback, _order = 0, _minduration
     // -------
     
     /// @ignore
-    /// Internal method for executing the minimum required amount of processing each frame.
-    static perform_minimum = function() {
+    /// Internal method for executing the reserved amount of processing each frame.
+    static perform_reserved = function() {
         if (!is_active)
             return;
         
@@ -42,8 +42,8 @@ function MainframeBackgroundAction(_process, _callback, _order = 0, _minduration
     }
     
     /// @ignore
-    /// Internal method for using the remaining available processing time to do more processing.
-    static perform_until = function(_time) {
+    /// Internal method for using the remaining available time for additional processing.
+    static perform_additional = function(_time) {
         if (!is_active)
             return;
         
@@ -63,7 +63,7 @@ function MainframeBackgroundAction(_process, _callback, _order = 0, _minduration
     }
     
     /// @func remove()
-    /// @desc Removes the action from its background process, so it's no longer executed.
+    /// @desc Removes the action from the post-frame processing, so it's no longer executed.
     static remove = function() {
         process.remove(self);
     }

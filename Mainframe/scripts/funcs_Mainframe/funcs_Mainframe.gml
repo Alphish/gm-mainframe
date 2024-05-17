@@ -37,10 +37,10 @@ function mainframe_callback_user_event(_object, _number) {
 /// @arg {String} name      The name of the method.
 /// @returns {Function}
 function mainframe_callback_method_call(_caller, _name) {
-    // the method might be used by an event action or a background process action, depending on a specific method
+    // the method might be used by an event action or a post-frame process action alike
     // so "steps" and "time" argument are passed to the resulting callback
-    // for event actions, these arguments will be skipped during the call
-    // and they should be skipped by the referenced method as well
+    // for event actions, no arguments will be passed
+    // so a method used for an event action should be parameterless as well
     return method({ caller: _caller, method_name: _name }, function(_steps, _time) {
         var _caller = caller;
         var _name = method_name;
@@ -201,53 +201,50 @@ function mainframe_draw_gui_end_add_method_call(_caller, _name, _order = 0) {
 }
 
 // ---------------------
-// Background processing
+// Post-frame processing
 // ---------------------
 
-/// @func mainframe_background_add_action(callback,[order],[minduration],[minsteps])
-/// @desc Adds a callback action to the Post-Frame background processing and returns the action.
-/// @arg {Function} callback        The action callback to execute during background processing; it should accept the minimum number of steps and the target time.
+/// @func mainframe_post_frame_add_action(callback,[order],[minduration],[minsteps])
+/// @desc Adds a callback post-frame action and returns it.
+/// @arg {Function} callback        The action callback to execute during post-frame processing; it should accept the minimum number of steps and the target time.
 /// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
 /// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
 /// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
-/// @returns {Struct.MainframeBackgroundAction}
-function mainframe_background_add_action(_callback, _order = 0, _minduration = 0, _minsteps = 1) {
+/// @returns {Struct.MainframePostFrameAction}
+function mainframe_post_frame_add_action(_callback, _order = 0, _minduration = 0, _minsteps = 1) {
     var _process = mainframe_get().post_frame_process;
     return _process.add_action(_callback, _order, _minduration, _minsteps);
 }
 
-/// @func mainframe_background_add_method_call(caller,name,[order],[minduration],[minsteps])
-/// @desc Adds a method call action to the Post-Frame background processing and returns the action.
+/// @func mainframe_post_frame_add_method_call(caller,name,[order],[minduration],[minsteps])
+/// @desc Adds a method call post-frame action and returns it.
 /// @arg {Any} caller               The object, instance or struct to execute the method of.
 /// @arg {String} name              The name of the method; it should accept the minimum number of steps and the target time.
 /// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
 /// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
 /// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
-/// @returns {Struct.MainframeBackgroundAction}
-function mainframe_background_add_method_call(_caller, _name, _order = 0, _minduration = 0, _minsteps = 1) {
+/// @returns {Struct.MainframePostFrameAction}
+function mainframe_post_frame_add_method_call(_caller, _name, _order = 0, _minduration = 0, _minsteps = 1) {
     var _process = mainframe_get().post_frame_process;
     return _process.add_method_call(_caller, _name, _order, _minduration, _minsteps);
 }
 
-/// @func mainframe_post_frame_add_action(callback,[order],[minduration],[minsteps])
-/// @desc Adds a callback action to the Post-Frame background processing and returns the action.
-/// @arg {Function} callback        The action callback to execute during background processing; it should accept the minimum number of steps and the target time.
-/// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
-/// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
-/// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
-/// @returns {Struct.MainframeBackgroundAction}
-function mainframe_post_frame_add_action(_callback, _order = 0, _minduration = 0, _minsteps = 1) {
-    return mainframe_background_add_action(_callback, _order, _minduration, _minsteps);
+/// @func mainframe_set_frame_margin(margin)
+/// @desc Sets the Mainframe frame margin (in milliseconds). Larger frame margins leave less time for post-frame processing, but leave more leeway to maintain a stable framerate.
+/// @arg {Real} margin          The new frame margin (in milliseconds).
+function mainframe_set_frame_margin(_margin) {
+    mainframe_get().frame_margin = _margin;
 }
 
-/// @func mainframe_post_frame_add_method_call(caller,name,[order],[minduration],[minsteps])
-/// @desc Adds a method call action to the Post-Frame background processing and returns the action.
-/// @arg {Any} caller               The object, instance or struct to execute the method of.
-/// @arg {String} name              The name of the method; it should accept the minimum number of steps and the target time.
-/// @arg {Real} [order]             The value of the execution order (actions with a lower order take priority).
-/// @arg {Real} [minduration]       The minimum processing duration reserved for each frame.
-/// @arg {Real} [minsteps]          The minimum number of processing steps reserved for each frame.
-/// @returns {Struct.MainframeBackgroundAction}
-function mainframe_post_frame_add_method_call(_caller, _name, _order = 0, _minduration = 0, _minsteps = 1) {
-    return mainframe_background_add_method_call(_caller, _name, _order, _minduration, _minsteps);
+/// @func mainframe_set_frame_duration(duration)
+/// @desc Sets the Mainframe frame duration (in milliseconds), overriding the game speed based duration. Larger duration will leave more time for post-frame processing, but will lead to a lower framerate.
+/// @arg {Real} duration        The new frame duration (in milliseconds).
+function mainframe_set_frame_duration(_duration) {
+    mainframe_get().frame_duration = _duration;
+}
+
+/// @func mainframe_clear_frame_duration()
+/// @desc Clears the Mainframe frame duration, so that desired frame duration is based on the game speed instead.
+function mainframe_clear_frame_duration() {
+    mainframe_get().frame_duration = undefined;
 }
