@@ -31,8 +31,8 @@ The process can define various actions with their processing logic, represented 
 
 - **callback** - a function or method containing the processing logic; it takes the number of steps and target time as its arguments
 - **order value** - indicates the action priority; actions with a lower order value take priority during the *additional processing* phase
-- **minimum steps** - the number of iterations to execute during the *reserved processing* phase
-- **minimum duration** - the available processing time during the *reserved processing* phase, in milliseconds
+- **minimum duration** - the required processing time (in milliseconds) during the *reserved processing* phase
+- **minimum steps** - the required number of iterations to execute during the *reserved processing* phase
 
 ## Example callback
 
@@ -74,15 +74,15 @@ During the additional processing phase, it passes 0 as the *steps* argument and 
 
 To register a post-frame action, you can use the following methods on the `MainframeEvent` struct:
 
-- `add_action(callback,[order],[minsteps],[minduration])` - creates a post-frame action executing the given callback when performed
-- `add_method_call(caller,name,[order])` - creates a post-frame action calling a method with the given name for an object, instance or struct; if an object asset is passed, the method will be executed for all its instances
+- `add_action(callback,[order],[minduration],[minsteps])` - creates a post-frame action executing the given callback when performed
+- `add_method_call(caller,name,[order],[minduration],[minsteps])` - creates a post-frame action calling a method with the given name for an object, instance or struct; if an object asset is passed, the method will be executed for all its instances
 
 Additionally, the following script functions are available:
 
-- `mainframe_post_frame_add_action(callback,[order],[minsteps],[minduration])` - creates a post-frame action executing the given callback when performed
-- `mainframe_post_frame_add_method_call(caller,name,[order],[minsteps],[minduration])` - creates a post-frame action executing the given method
+- `mainframe_post_frame_add_action(callback,[order],[minduration],[minsteps])` - creates a post-frame action executing the given callback when performed
+- `mainframe_post_frame_add_method_call(caller,name,[order],[minduration],[minsteps])` - creates a post-frame action executing the given method
 
-Each of the aforementioned methods and script functions returns an instance of the newly created `MainframePostFrameAction` struct for further management. The default value of `order` is 0. The default value of `minsteps` is 1 (so that at least one iteration is executed each frame). The default value of `minduration` is 0 (so only a default single repetition is perform in the *reserved processing* phase).
+Each of the aforementioned methods and script functions returns an instance of the newly created `MainframePostFrameAction` struct for further management. The default value of `order` is 0. The default value of `minduration` is 0 (so that only required number of iterations is performed in the *reserved processing* phase). The default value of `minsteps` is 1 (so that at least one iteration is executed each frame).
 
 **Note:** Similarly to Mainframe events, it's recommended to register few broad actions rather than many highly specific ones.
 
@@ -103,7 +103,7 @@ Additionally, `MainframePostFrameProcess` has the following methods for actions 
 - `remove(action)` - removes the given post-frame action so it's not performed anymore
 - `clear()` - removes all post-frame actions
 
-Finally, each `MainframePostFrameAction` instance has `min_steps` and `min_duration` variables, affecting the reserved number of iterations and duration for each frame. Changing these variables takes effect pretty much immediately; the very next reserved processing run for the given action will use the new values.
+Finally, each `MainframePostFrameAction` instance has `min_duration` and `min_steps` variables, affecting the reserved processing time and number of iterations for each frame. Changing these variables takes effect pretty much immediately; the very next reserved processing run will use the new values for the affected action.
 
 ## Frame cycle and caveats
 

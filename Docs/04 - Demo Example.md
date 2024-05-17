@@ -222,7 +222,7 @@ count_up_action = mainframe_post_frame_add_method_call(id, "count_up");
 It's possible to specify its order and reserved number of steps/duration as well:
 
 ```gml
-count_up_action = mainframe_post_frame_add_method_call(id, "count_up", /* order */ 10, /* reserved steps*/ 100, /* reserved duration */ 0.1);
+count_up_action = mainframe_post_frame_add_method_call(id, "count_up", /* order */ 10, /* reserved duration */ 0.1, /* reserved steps*/ 100);
 ```
 
 This will ensure that every frame, at least 100 increment steps will be attempted and at least 0.1ms will be reserved from the frame time for the processing. Of course, if there's no more processing to be done, the `count_up` method will exit early, freeing up some of the reserved time.
