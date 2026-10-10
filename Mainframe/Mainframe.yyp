@@ -14,6 +14,7 @@
     {"$GMFolder":"","%Name":"Alphish","folderPath":"folders/_Packages/Alphish.yy","name":"Alphish","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Mainframe","folderPath":"folders/_Packages/Alphish/Mainframe.yy","name":"Mainframe","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Events","folderPath":"folders/_Packages/Alphish/Mainframe/Events.yy","name":"Events","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Demo","folderPath":"folders/Demo.yy","name":"Demo","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
   "ForcedPrefabProjectReferences":[],
   "IncludedFiles":[],
@@ -24,8 +25,9 @@
   },
   "name":"Mainframe",
   "resources":[
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"ctrl_Demo","path":"objects/ctrl_Demo/ctrl_Demo.yy",},},
     {"id":{"name":"sys_Mainframe","path":"objects/sys_Mainframe/sys_Mainframe.yy",},},
+    {"id":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
     {"id":{"name":"ctor_MainframeEventManager","path":"scripts/ctor_MainframeEventManager/ctor_MainframeEventManager.yy",},},
     {"id":{"name":"ctor_MainframeEventObserver","path":"scripts/ctor_MainframeEventObserver/ctor_MainframeEventObserver.yy",},},
     {"id":{"name":"ctor_MainframeEventSubject","path":"scripts/ctor_MainframeEventSubject/ctor_MainframeEventSubject.yy",},},
@@ -35,7 +37,7 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
