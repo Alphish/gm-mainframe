@@ -25,6 +25,7 @@
   "name":"Mainframe",
   "resources":[
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"id":{"name":"sys_Mainframe","path":"objects/sys_Mainframe/sys_Mainframe.yy",},},
     {"id":{"name":"ctor_MainframeEventManager","path":"scripts/ctor_MainframeEventManager/ctor_MainframeEventManager.yy",},},
     {"id":{"name":"ctor_MainframeEventObserver","path":"scripts/ctor_MainframeEventObserver/ctor_MainframeEventObserver.yy",},},
     {"id":{"name":"ctor_MainframeEventSubject","path":"scripts/ctor_MainframeEventSubject/ctor_MainframeEventSubject.yy",},},
