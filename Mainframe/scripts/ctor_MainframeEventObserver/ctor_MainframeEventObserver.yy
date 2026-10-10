@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_MainframeEventObserver",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_MainframeEventObserver",
+  "parent":{
+    "name":"Events",
+    "path":"folders/_Packages/Alphish/Mainframe/Events.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
