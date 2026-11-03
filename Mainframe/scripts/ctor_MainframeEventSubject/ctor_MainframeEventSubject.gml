@@ -1,14 +1,13 @@
 /// @desc A basic event subject implementation, managing its observers and sending events to them.
-/// @arg {Struct.MainframeEventManager} manager     The event manager tracking the subject.
-/// @arg {Any} owner                                The owner the event subject belongs to.
-/// @arg {Any} key                                  The key specifying the owner's event.
-/// @arg {Bool} [removeempty]                       Whether the event should be automatically cleaned up and removed when turning empty.
-function MainframeEventSubject(_manager, _owner, _key, _removeempty = true) constructor {
+/// @arg {Struct.MainframeEventOwnerManager} manager    The owner's event manager.
+/// @arg {Any} key                                      The key specifying the owner's event.
+/// @arg {Bool} [removeempty]                           Whether the event subject should be automatically cleaned up and removed when turning empty.
+function MainframeEventSubject(_manager, _key, _removeempty = true) constructor {
     /// @ignore
     manager = _manager;
     
     /// @ignore
-    owner = _owner;
+    owner = manager.owner;
     
     /// @ignore
     key = _key;
