@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_MainframeQueueWorker",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_MainframeQueueWorker",
+  "parent":{
+    "name":"Workers",
+    "path":"folders/_Packages/Alphish/Mainframe/Workers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
