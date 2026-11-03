@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"ctor_MainframeTask",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ctor_MainframeTask",
+  "parent":{
+    "name":"Workers",
+    "path":"folders/_Packages/Alphish/Mainframe/Workers.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
