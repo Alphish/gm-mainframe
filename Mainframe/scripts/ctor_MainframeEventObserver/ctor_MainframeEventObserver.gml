@@ -23,7 +23,7 @@ function MainframeEventObserver(_subject, _handler) constructor {
         return subject.remove_observer(self);
     }
     
-    /// #desc Performs the cleanup after the observer is detached from its subject.
+    /// @desc Performs the cleanup after the observer is detached from its subject.
     static cleanup = function() {
         // a simple observer needs no additional cleanup logic
     }

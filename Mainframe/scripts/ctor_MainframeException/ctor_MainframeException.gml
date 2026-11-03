@@ -29,3 +29,12 @@ MainframeException.event_subject_already_exists = function(_owner, _key) {
         $"Cannot create the event subject; the event subject '{_key}' for {_owner} already exists."
         );
 }
+
+/// @desc Creates a Mainframe exception thrown when attempting to perform a non-removal operation after the event manager has been cleaned up.
+/// @returns {Struct.MainframeException}
+MainframeException.event_manager_cleaned_up = function() {
+    return new MainframeException(
+        nameof(event_manager_cleaned_up),
+        $"This operation is invalid after the event manager has been already cleaned up."
+        );
+}
