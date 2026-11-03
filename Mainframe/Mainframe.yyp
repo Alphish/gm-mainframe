@@ -33,6 +33,7 @@
     {"id":{"name":"ui_TaskManager","path":"objects/ui_TaskManager/ui_TaskManager.yy",},},
     {"id":{"name":"ui_TaskRemover","path":"objects/ui_TaskRemover/ui_TaskRemover.yy",},},
     {"id":{"name":"rm_Demo","path":"rooms/rm_Demo/rm_Demo.yy",},},
+    {"id":{"name":"ctor_DemoTaskProcessor","path":"scripts/ctor_DemoTaskProcessor/ctor_DemoTaskProcessor.yy",},},
     {"id":{"name":"ctor_MainframeEventManager","path":"scripts/ctor_MainframeEventManager/ctor_MainframeEventManager.yy",},},
     {"id":{"name":"ctor_MainframeEventObserver","path":"scripts/ctor_MainframeEventObserver/ctor_MainframeEventObserver.yy",},},
     {"id":{"name":"ctor_MainframeEventOwnerManager","path":"scripts/ctor_MainframeEventOwnerManager/ctor_MainframeEventOwnerManager.yy",},},
