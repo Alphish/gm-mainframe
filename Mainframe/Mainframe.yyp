@@ -42,6 +42,7 @@
     {"id":{"name":"ctor_MainframeQueueWorker","path":"scripts/ctor_MainframeQueueWorker/ctor_MainframeQueueWorker.yy",},},
     {"id":{"name":"ctor_MainframeTask","path":"scripts/ctor_MainframeTask/ctor_MainframeTask.yy",},},
     {"id":{"name":"funcs_Mainframe","path":"scripts/funcs_Mainframe/funcs_Mainframe.yy",},},
+    {"id":{"name":"funcs_Postframe","path":"scripts/funcs_Postframe/funcs_Postframe.yy",},},
     {"id":{"name":"spr_Frame","path":"sprites/spr_Frame/spr_Frame.yy",},},
     {"id":{"name":"spr_Remove","path":"sprites/spr_Remove/spr_Remove.yy",},},
   ],

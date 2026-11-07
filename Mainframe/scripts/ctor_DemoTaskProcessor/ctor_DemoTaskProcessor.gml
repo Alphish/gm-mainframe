@@ -11,9 +11,6 @@ function DemoTaskProcessor(_total) constructor {
     }
     
     static process_step = function() {
-        if (status)
-            return true;
-        
         if (keyboard_check_pressed(ord("E")))
             throw $"ERROR AT {current_step}/{total_steps}";
         
@@ -30,6 +27,7 @@ function DemoTaskProcessor(_total) constructor {
     
     static finish = function() {
         status = true;
+        process_step = function() { return true; };
         return true;
     }
     
@@ -48,5 +46,6 @@ function DemoTaskProcessor(_total) constructor {
     }
     
     static cleanup = function(_auto = false) {
+        finish();
     }
 }

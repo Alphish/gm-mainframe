@@ -88,7 +88,9 @@ function MainframeTask(_processor, _evmanager = undefined) constructor {
     
     /// @desc Performs a single processing step and returns whether the processing should stop.
     /// @returns {Bool}
-    process = method(processor, processor.process_step);
+    process = function() {
+        return processor.process_step();
+    }
     
     /// @desc Handles an exception caught during the processing.
     /// @arg {Any} exception        The caught exception.
