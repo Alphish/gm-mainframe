@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"funcs_Postframe",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"funcs_Postframe",
+  "parent":{
+    "name":"Mainframe",
+    "path":"folders/_Packages/Alphish/Mainframe.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
