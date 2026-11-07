@@ -9,8 +9,7 @@ on_second.add_handler(function(_value) {
 
 previous_second = current_second;
 
-worker = new MainframeQueueWorker();
-worker.when_tasks_changed().add_handler(function(_data, _sender) {
+postframe_get_worker().when_tasks_changed().add_handler(function(_data, _sender) {
     with (ui_TaskManager) {
         if (task == _sender.ongoing_task)
             y = 20;
@@ -25,5 +24,5 @@ instance_create_depth(room_width div 4 + 20, 20, depth, ui_TaskLog);
 create_task = function(_title, _processor) {
     var _task = new MainframeTask(_processor);
     instance_create_depth(20, 20, depth, ui_TaskManager, { title: $"{_title} #{task_index++}", task: _task, image_xscale: 8, image_yscale: 1.5 });
-    worker.schedule_task(_task);
+    postframe_schedule_task(_task);
 }

@@ -5,21 +5,21 @@ if (previous_second != current_second) {
 }
 
 if (keyboard_check_pressed(49)) {
-    create_task("10k steps", new DemoTaskProcessor(10_000));
-}
-if (keyboard_check_pressed(50)) {
-    create_task("30k steps", new DemoTaskProcessor(30_000));
-}
-if (keyboard_check_pressed(51)) {
     create_task("100k steps", new DemoTaskProcessor(100_000));
 }
-if (keyboard_check_pressed(52)) {
+if (keyboard_check_pressed(50)) {
     create_task("300k steps", new DemoTaskProcessor(300_000));
 }
-if (keyboard_check_pressed(53)) {
+if (keyboard_check_pressed(51)) {
     create_task("1m steps", new DemoTaskProcessor(1_000_000));
+}
+if (keyboard_check_pressed(52)) {
+    create_task("3m steps", new DemoTaskProcessor(3_000_000));
+}
+if (keyboard_check_pressed(53)) {
+    create_task("10m steps", new DemoTaskProcessor(10_000_000));
 }
 
 if (keyboard_check_pressed(vk_end)) {
-    worker.run_to_end();
+    postframe_run_to_end();
 }
